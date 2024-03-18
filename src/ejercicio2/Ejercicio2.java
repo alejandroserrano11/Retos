@@ -57,7 +57,7 @@ public class Ejercicio2 {
     public static void puntoBC() throws IOException {
         // apartado B y C
 
-        // abrir el fichero uno para escritura, usar bufferedwriter y filewriter y 
+        // abrir el fichero uno para escritura, usar bufferedwriter y filewriter y
         // pedir al usuario un nombre hasta que el introducido sea solo: "-"
 
         BufferedWriter escritor = null;
@@ -66,15 +66,15 @@ public class Ejercicio2 {
 
         try {
             escritor = new BufferedWriter(new FileWriter(new File("dirEjer2//uno.txt")));
-            do{
+            do {
                 System.out.println("Introduce nombre por pantalla: ");
                 System.out.println("Introduce - para finalizar");
                 nombre = teclado.nextLine();
-                if (!nombre.equals("-")){
+                if (!nombre.equals("-")) {
                     escritor.write(nombre + "\n");
                 }
             } while (!nombre.equals("-"));
-                    teclado.close();
+            teclado.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -85,9 +85,4 @@ public class Ejercicio2 {
 
     }
 
-    
-    
-    
 }
-
-
